@@ -7,7 +7,6 @@ def total_cash(array)
 end
 
 def add_or_remove_cash(array, cash)
-  current_cash = 0
   updated_cash = array[:admin][:total_cash] += cash
 end
 
@@ -16,7 +15,6 @@ def pets_sold(array)
 end
 
 def increase_pets_sold(array, number_sold)
-  current_number_of_pets = 0
   new_number_of_pets = array[:admin][:pets_sold] += number_sold
 end
 
@@ -54,4 +52,21 @@ end
 
 def add_pet_to_stock(petshop, pet)
   petshop[:pets].push(pet)
+end
+
+
+def customer_cash(customer)
+  return customer[:cash]
+end
+
+def remove_customer_cash(customer, amount)
+  return customer[:cash] -= amount
+end
+
+def customer_pet_count(customer)
+  return customer[:pets].size
+end
+
+def add_pet_to_customer(customer, pet)
+  customer[:pets].push(pet)
 end
