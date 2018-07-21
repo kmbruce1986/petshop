@@ -23,15 +23,15 @@ def stock_count(array)
 end
 
 
-# def pets_by_breed(petshop, breed)
-#   breed_array = []
-#   for pet in petshop[:pets]
-#     if pet[:breed] == breed
-#       breed_array.push
-#     end
-#   end
-#   return breed_array.count
-# end
+def pets_by_breed(petshop, breed)
+  breed_array = []
+    for pet in petshop[:pets]
+      if pet[:breed] == breed
+      breed_array.push(pet[:breed])
+      end
+    end
+    return breed_array
+end
 
 def find_pet_by_name(petshop, name)
   for pet in petshop[:pets]
@@ -42,13 +42,14 @@ def find_pet_by_name(petshop, name)
   return nil
 end
 
-# def remove_pet_by_name(petshop, name)
-#   for pet in petshop[:pets]
-#     if pet[:name] == name
-#       petshop.delete(name)
-#     end
-#   end
-# end
+def remove_pet_by_name(petshop, name)
+  for pet in petshop[:pets]
+    if pet[:name] == name
+    petshop[:pets].delete(pet)
+    end
+  end
+end
+
 
 def add_pet_to_stock(petshop, pet)
   petshop[:pets].push(pet)
